@@ -1,2 +1,14 @@
 <button (click)="data()">oprimeme</button>
+<table>
+    <tr>
+        <th>Nombres</th>
+        <th>Apellidos</th>
+    </tr>
+
+    <tr>
+        <td><p *ngFor="let Nombre of nombres">{{Nombre}}</p></td>
+        <td><p *ngFor="let Apellido of apellidos">{{Apellido}}</p></td>
+
+    </tr>
+</table>
 <router-outlet></router-outlet>

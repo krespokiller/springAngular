@@ -8,14 +8,14 @@ import { Allusers } from '../interfaces/interface';
   providedIn: 'root'
 })
 export class ServicesService {
-  private _data!:Allusers
+  private _data!:Allusers[]
   private _url:string = environment.url
   constructor(private http:HttpClient) { }
   public geturl(){
     return this._url
   }
   public getdata(url:string){
-    this.http.get<Allusers>(url).subscribe((resp)=>this._data = resp)
+    this.http.get<Allusers[]>(url).subscribe((resp)=>this._data = resp)
     return this._data
   }
 
