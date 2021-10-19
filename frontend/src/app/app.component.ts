@@ -1,4 +1,5 @@
 import { Component } from '@angular/core';
+import { ServicesService } from './services/services.service';
 
 @Component({
   selector: 'app-root',
@@ -6,5 +7,9 @@ import { Component } from '@angular/core';
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Frontend';
+  constructor(private services:ServicesService){}
+  private url = this.services.geturl()
+  data(){console.log(
+    this.services.getdata(`${this.url}/all`)
+  )}
 }
