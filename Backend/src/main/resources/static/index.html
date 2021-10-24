@@ -1,13 +1,35 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Springapp</title>
+<!DOCTYPE HTML>
+<html xmlns:th="http://www.thymeleaf.org">
+<head> 
+    <title>xd</title> 
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8" />
     <script src="./js/index.js"></script>
+    <link rel="stylesheet" href="./styles/styles.css">
 </head>
 <body>
-        <p id="contenido"></p>
-</body>
+    <form name="formulario" onsubmit="return enviardatos()">
+        <label for="regidentifica">Identificacion:</label><br>
+        <input id="regidentifica" name="regidentifica"><br>
+        
+        <label for="regnombre">Nombre:</label><br>
+        <input id="regnombre" name="regnombre"><br>
+
+        <label for="regapellidos">Apellido:</label><br>
+        <input id="regapellidos" name="regapellidos"><br>
+
+        <label for="regcorreo">Email:</label><br>
+        <input id="regcorreo" name="regcorreo"><br>
+
+        <label for="regmovil">Movil:</label><br>
+        <input id="regmovil" name="regmovil"><br>
+        
+        <label for="regdireccion">Direccion:</label><br>
+        <input id="regdireccion" name="regdireccion"><br>
+
+        <label for="regmunicipio">Municipio:</label><br>
+        <input id="regmunicipio" name="regmunicipio"><br><br>
+        <input type="submit" value="Submit">
+      </form>
+      
+    </body>
 </html>
